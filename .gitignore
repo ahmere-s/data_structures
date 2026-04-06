@@ -2,3 +2,6 @@
 *.un~
 *.un
 *~
+*.settings
+*.project
+
