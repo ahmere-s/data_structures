@@ -37,6 +37,28 @@ public class BrowserHistory {
   public static void main(String[] args){
     BrowserHistory myBH = new BrowserHistory();
     
+    //Visit A, B and C
+    myBH.visit("SiteA");
+    myBH.visit("SiteB");
+    myBH.visit("SiteC");
+    
+    System.out.println("Current Site: " + myBH.getCurrentPage());
+    
+    //Going back twice
+    myBH.back();
+    myBH.back();
+    System.out.println("After going back twice: " + myBH.getCurrentPage());
+    
+    myBH.visit("SiteD");
+    
+    System.out.println("Trying to visit site D...");
+    System.out.println("Current site: " + myBH.getCurrentPage());
+    
+    if (myBH.forwardStack.isEmpty()){System.out.println("Forward Stack is clear.");}
+    else {System.out.println("Your forward stack includes: " + myBH.forwardStack);}
+    
+    
+    
     
   }
 }
